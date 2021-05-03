@@ -140,7 +140,11 @@ def get_bottomleft(grid, height, x, y):
     If the cell is on the last row, return 0.
     If the cell is on the first column , return 0.
     """
-    return None
+    if y == height-1:
+        return 0
+    else:
+        resultaat = grid[y+1][x-1]
+    return resultaat
 
 
 def get_bottomright(grid, width, height, x, y):
@@ -155,7 +159,11 @@ def get_bottomright(grid, width, height, x, y):
     If the cell is on the last row, return 0.
     If the cell is on the last column , return 0.
     """
-    return None
+    if y == height -1:
+        return 0
+    else:
+        resultaat = grid[y+1][x+1]
+    return resultaat
 
 
 def get_neighbours(grid, width, height, x, y):
