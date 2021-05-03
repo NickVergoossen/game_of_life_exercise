@@ -175,7 +175,19 @@ def get_neighbours(grid, width, height, x, y):
     x: the x-position of the cell
     y: the y-position of the cell
     """
-    return None
+
+
+    resultaat = [
+        get_topleft(grid, x, y),
+        get_top(grid, x, y),
+        get_topright(grid, width, x, y),
+        get_right(grid, width, x, y),
+        get_bottomright(grid, width, height, x, y),
+        get_bottom(grid, height, x, y),
+        get_bottomleft(grid, height, x, y),
+        get_left(grid, x, y)
+    ]
+    return resultaat
 
 
 def count_neighbours(grid, width, height, x, y):
